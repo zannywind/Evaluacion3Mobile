@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta de la marca (logo e ícono). Se mantiene igual a ui/theme/Theme.kt. -->
+    <color name="marca_azul">#FF0D47A1</color>
+    <color name="marca_naranjo">#FFEF6C00</color>
+    <color name="marca_blanco">#FFFFFFFF</color>
+</resources>

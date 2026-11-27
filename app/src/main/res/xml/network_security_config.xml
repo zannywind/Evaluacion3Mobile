@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tráfico de red de la app.
+
+  - HTTPS (certificados del sistema): permitido hacia cualquier servidor.
+  - HTTP sin cifrar (cleartext): solo para desarrollo contra el backend local. Android no permite
+    expresar rangos de IP (192.168.x.x, 10.x.x.x) en este archivo, por eso la plataforma lo deja
+    abierto y la restricción real se aplica en el código: UrlServidor rechaza cualquier URL http
+    que no sea 10.0.2.2, localhost o una IP de red privada, y GuardiaCleartext vuelve a
+    comprobarlo en cada petición (data/remote/UrlServidor.kt y ApiClient.kt).
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
